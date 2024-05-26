@@ -1,0 +1,104 @@
+/*NAVIGATIONSBAR*/
+.navbar-nav>li {
+    padding: 40px;
+    font-family: 'Cinzel Decorative';
+    color: #D1C5AE;
+    font-size: 18px;
+
+}
+
+.navbar-light {
+    background-color: black !important;
+    border: none !important;
+    border-width: 0 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    display: inline;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #EDE5DA;
+    padding-bottom: 1px;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    border-bottom: 1px solid #D1C5AE;
+
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255, 2)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.container-fluid {
+    max-width: 1600px;
+}
+
+/*logo*/
+.navbar-brand {
+    padding-left: 20px;
+}
+
+/*FOOTER*/
+.footer1 {
+    background-color: #D1C5AE;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer2 {
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.stjernetegn-p {
+        font-family: 'Lustria", serif';
+        font-size: 18px;
+        color: #EDE5DA;
+    }
+
+/*TEKST*/
+.lustria-regular {
+    font-family: "Lustria", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-family: "Lustria", serif;
+    margin: 35px;
+}
+
+/*IKONER GROW VED HOVER*/
+.grow {
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+/*COPYRIGHT*/
+.col-footer {
+    padding-top: 10px;
+}
+
+
+/*Responsivt*/
+/*Mobile*/
+@media screen and (max-width: 785px) {
+    .navbar-nav>li {
+        padding: 40px;
+        font-family: 'Cinzel Decorative';
+        color: #D1C5AE;
+        font-size: 16px;
+    }
+    .stjernetegn-p {
+        font-size: 14px;
+    }    
+}
+/*Tablet*/
+@media screen and (min-width: 785px) {}
