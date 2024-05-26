@@ -1,0 +1,235 @@
+/*generelt*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #EDE5DA;
+}
+
+h1 {
+    font-family: 'Cinzel Decorative';
+    color: #D1C5AE;
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: 'Cinzel Decorative';
+    color: #D1C5AE;
+}
+
+p {
+    font-family: 'Lustria", serif';
+    color: #EDE5DA;
+}
+
+.forsideh1 {
+    margin-bottom: 20px;
+}
+
+/*Video container - baggrundsvideo */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/*Skjulte video controls - pause/play knap*/
+.video-container video::-webkit-media-controls {
+    display: none !important;
+}
+
+.video-container video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
+
+/*Header*/
+.season {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    z-index: 1;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header-content {
+    margin-top: 10%;
+}
+
+.overlay-img {
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+.placeholder-img {
+    max-width: 40%;
+    height: auto;
+}
+
+.horoskop-hjul {
+    max-width: 38.5%;
+    height: auto;
+}
+
+.btn {
+    background-color: #D1C5AE;
+
+}
+
+.btn:hover {
+    background-color: #b8a890;
+    color: black;
+}
+
+
+
+/*Javascript style*/
+#space {
+    font-size: 23.5px;
+}
+
+/*Styling af input bokse med dato og måned*/
+#box input[type="number"] {
+    color: #000;
+    background-color: #EDE5DA;
+    padding: 1.1px;
+    border-radius: 4px;
+}
+
+/*Styling af skrift*/
+#box h1 {
+    color: #D1C5AE;
+}
+
+#box p {
+    color: #EDE5DA;
+}
+
+/*Responsivt*/
+/*Mobile*/
+@media screen and (max-width: 785px) {
+    p {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .overlay-img {
+        max-width: 70%;
+        height: auto;
+        align-items: center;
+    }
+
+    .stjerne-historie {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+
+    }
+
+    .mb-3 {
+        margin-bottom: 0.7rem !important;
+    }
+
+    /*Skjulte video controls - pause/play knap*/
+    .video-container video::-webkit-media-controls {
+        display: none !important;
+    }
+
+    .video-container video::-webkit-media-controls-start-playback-button {
+        display: none !important;
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width: 785px) {
+    p {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .overlay-img {
+        max-width: 70%;
+        height: auto;
+        align-items: center;
+    }
+
+    .stjerne-historie {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 16px;
+
+    }
+
+    .mb-3 {
+        margin-bottom: 0.7rem !important;
+    }
+
+    .stjernetegn {
+        margin-top: 15px;
+    }
+
+    .overlay-img {
+        max-width: 100%;
+        height: auto;
+        align-items: center;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1089px) {
+    h1 {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .mb-3 {
+        margin-bottom: 1rem !important;
+    }
+}
+
+
+
