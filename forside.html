@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stjerne-Natten - Forside</title>
+    <link rel="shortcut icon" type="img/png" href="img/generelle/blacklogo.png" alt="stjernetegn logo" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lustria&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="forside-stylesheet.css" />
+    <link rel="stylesheet" href="navfooter-stylesheet.css" />
+</head>
+
+<body>
+    <!--Navigation - indsat fra Bootstrap-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand grow" href="forside.html">
+                <img src="img/generelle/yellowlogo.png" alt="stjernetegn guld stjerner logo stjerne-natten"
+                    href="forside.html" width="100px" height="100px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item grow">
+                        <a class="nav-link active" aria-current="page" href="forside.html">forside</a>
+                    </li>
+                    <li class="nav-item grow">
+                        <a class="nav-link text-light" href="stjernetegn.html">stjernetegn</a>
+                    </li>
+                    <li class="nav-item grow">
+                        <a class="nav-link text-light" href="horoskop.html">horoskop</a>
+                    </li>
+                    <li class="nav-item grow">
+                        <a class="nav-link text-light" href="omos.html">OM OS</a>
+                    </li>
+                    <li class="nav-item grow">
+                        <a class="nav-link text-light" href="kontakt.html">kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Forside header-->
+    <!--Forside video-->
+    <div class="video-container">
+        <div class="col-12">
+            <video id="video" controls autoplay muted loop>
+                <source src="video/header-video.mp4" alt="header video stjerner universet horoskop stjernetegn"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!--Header tekst-->
+        <div class="container-fluid season">
+            <div class="row g-2">
+                <div class="col-xl-6 col-md-6 col-sm-12">
+                    <img src="img/stjernebilleder/tvilling-gold.png"
+                        alt="gemini tvillingen stjernetegn stjernebillede astrologi" class="overlay-img">
+                </div>
+                <div class="col-xl-6 col-md-6 col-sm-12 header-content">
+                    <h1 class="forsideh1">Sæsonens stjernetegn</h1>
+                    <h2>tvillingen</h2>
+                    <h2>21/5 - 20/6</h2>
+                    <p>Sæsonen for Tvillingerne bringer en ekstraordinær <br>cocktail af energi,
+                        nysgerrighed og dualitet<br> til universet.</p>
+                    <p>
+                        Fra den 21. maj til den 20. juni belyser dette lufttegn<br>
+                        verden med dets dynamiske og skiftende karakter.</p>
+                    <div class="grow">
+                        <a href="stjernetegn.html#tvillingen">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#D1C5AE"
+                                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Forside sektion 1 Stjernetegn + udregner-->
+    <div class="container-fluid boxes">
+        <div class="row g-2">
+            <div class="col-xl-6 col-md-6 col-sm-12 mb-3 udregner">
+                <div class="p-3 bg-black rounded text-center">
+                    <div id="box">
+                        <h1>hvad er dit stjernetegn?</h1>
+                        <p id="img-2"><img src="img/generelle/gold-horoscope-outer.png"
+                                alt="horoskop-hjul vædder vandmand krebs skorpion tvilling tyr stenbuk vægt jomfru løve fisk skytte"
+                                width="30.3%" height="auto"></p>
+                        <p>Indtast din fødselsdato</p>
+                        <p>Dag <input type="number" id="day" min="1" max="31">
+                            Måned <input type="number" id="month" min="1" max="12">
+                        </p>
+                        <a id="click" onclick="zodiac()" class="btn">Udregn dit stjernetegn</a>
+                        <p id="space"><span id="output"></span></p>
+                        <p id="img"></p>
+                        <p id="knap"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-12 mb-3">
+                <div class="p-3 pb-4 bg-black rounded text-center">
+                    <h1>stjernetegn</h1>
+                    <img src="img/generelle/zodiac-signs-collection.png" class="horoskop-hjul"
+                        alt="horoskop stjernetegn løven vædderen tvillinger krebs skytte">
+                    <p>Lær om dit eget og de forskellige stjernetegn og hvad de forskellige planeter, farver og
+                        krystaller har af
+                        betydning.</p>
+                    <div class="grow">
+                        <a href="stjernetegn.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#D1C5AE"
+                                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Forside sektion 2 Video-->
+    <div class="historie-video">
+        <div class="container-fluid">
+            <div class="mb-3 p-3 pb-4 bg-black rounded">
+                <div class="row">
+                    <div class="col-xl-12 col-md-12 col-sm-12 text-center">
+                        <h1>Stjernetegnenes historie</h1>
+                    </div>
+                    <div class="col-xl-6">
+                        <p>Hvad har stjernetegnene og astrologi med historie at gøre?
+                            <br>Dette spørgsmål vil vi forsøge at svare på i videoen her.
+                        </p>
+                        <p>Vi kommer ind på hvilken rolle astrologien havde i middelalderen og <br>renæssancen samt dens
+                            fortsatte
+                            relevans i moderne tid, på trods af dens videnskabelige validitet er genstand for debat.
+                        </p>
+                        <p>Så vær med til at udforske stjernetegnenes fascinerende verden yderligere ved at besøge vores
+                            hjemmeside
+                            og følge os på sociale medier for opdateringer og eksklusive indsigter.
+                        </p>
+                    </div>
+                    <div class="col-xl-6 text-center">
+                        <video src="video/hjemmeside_video_mindre.mp4" class="video-historie"
+                            alt="stjernetegn historie vædder vandmand krebs skorpion tvilling tyr stenbuk vægt jomfru løve fisk skytte"
+                            width="90%" controls muted></video>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Forside sektion 3 Personlige horoskoper og hvem er vi-->
+    <div class="container-fluid">
+        <div class="row g-2">
+            <div class="col-xl-6 col-md-6 col-sm-12 mb-3">
+                <div class="p-3 pb-4 bg-black rounded text-center">
+                    <h1>hvem er vi?</h1>
+                    <img src="img/generelle/moon-cycle.png" alt="månecyklus stjerner stjernetegn fuldmåne"
+                        class="horoskop-hjul">
+                    <p>Er du nysgerrig på hvem der står bag denne side? Så kan du læse mere om os her.
+                        Du kan også kontakte os hvis du har nogen spørgsmål. </p>
+                    <div class="grow">
+                        <a href="omos.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#D1C5AE"
+                                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-12 mb-3">
+                <div class="p-3 pb-4 bg-black rounded text-center">
+                    <h1>personlige horoskoper</h1>
+                    <img src="img/generelle/gold-horoscope.png"
+                        alt="horoskop-hjul vædder vandmand krebs skorpion tvilling tyr stenbuk vægt jomfru løve fisk skytte"
+                        class="horoskop-hjul">
+                    <p>Generelt set er et horoskop designet til at give dig vejledning og indsigt i forskellige aspekter
+                        af dit
+                        liv ud fra dit stjernetegn.
+                        Læs mere her
+                    </p>
+                    <div class="grow">
+                        <a href="horoskop.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#D1C5AE"
+                                class="bi bi-arrow-right-circle" viewBox="0 0 16 16" ahref="horoskop.html">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Forside sektion 4 e-magasin-->
+    <div class="container-fluid">
+        <div class="mb-3 p-3 pb-4 bg-black rounded">
+            <div class="row">
+                <div class="col-xl-12 col-md-12 col-sm-12 text-center">
+                    <h1>e-magasin</h1>
+                </div>
+                <div class="col-xl-6 p-5 ml-8">
+                    <iframe style="border: 1px solid #777;"
+                        src="https://indd.adobe.com/embed/e41619fa-9681-4876-9929-b381e0c1f4c0?startpage=1&allowFullscreen=true"
+                        width="100%" height="100%" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+                <div class="col-xl-6 mt-5 mb-3">
+                    <p>I vores E-magasin vi dykker ned i mysterierne og skønheden i astrologi, krystaller og
+                        planeternes
+                        magi.<br><br>
+                        Uanset om du er en passioneret astrolog eller en nysgerrig sjæl på udkig efter indsigter, er
+                        vores mål
+                        at inspirere og oplyse dig gennem vores artikler, guider og historier.</p>
+
+                    <p>God læsning.</p>
+                    <div class="col text-center">
+                        <a href="https://indd.adobe.com/view/e41619fa-9681-4876-9929-b381e0c1f4c0"
+                            target="_blank"><button type="button" class="btn">Læs online</button></a>
+                        <a href="e-magasin/e-magasin.pdf" download><button type="button"
+                                class="btn">Download</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---Footer - top-->
+    <footer class="footer1">
+        <div class="container text-center footer">
+            <div class="row">
+                <div class="col">
+                    <div class="grow">
+                        <a href="https://www.facebook.com/profile.php?id=61560025078398" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white"
+                                class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="grow">
+                        <a href="https://www.instagram.com/_stjernenatten.dk_/" target="_blank" style="color: inherit;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white"
+                                class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="grow">
+                        <a href="kontakt.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white"
+                                class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!--Footer bund-->
+    <footer class="footer2">
+        <div class="col text-center footer">
+            <div class="row">
+                <div class="col">
+                    <a href="stjernetegn.html#vandmanden">
+                        <p class="text-decoration-underline stjernetegn-p grow">Vandmanden</p>
+                    </a>
+                    <a href="stjernetegn.html#fisken">
+                        <p class="text-decoration-underline stjernetegn-p grow">Fisken</p>
+                    </a>
+                    <a href="stjernetegn.html#vaedderen">
+                        <p class="text-decoration-underline stjernetegn-p grow">Vædderen</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="stjernetegn.html#tyren">
+                        <p class="text-decoration-underline stjernetegn-p grow">Tyren</p>
+                    </a>
+                    <a href="stjernetegn.html#tvillingen">
+                        <p class="text-decoration-underline stjernetegn-p grow">Tvillingen</p>
+                    </a>
+                    <a href="stjernetegn.html#krebsen">
+                        <p class="text-decoration-underline stjernetegn-p grow">Krebsen</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="stjernetegn.html#loeven">
+                        <p class="text-decoration-underline stjernetegn-p grow">Løven</p>
+                    </a>
+                    <a href="stjernetegn.html#jomfruen">
+                        <p class="text-decoration-underline stjernetegn-p grow">Jomfruen</p>
+                    </a>
+                    <a href="stjernetegn.html#vaegten">
+                        <p class="text-decoration-underline stjernetegn-p grow">Vægten</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="stjernetegn.html#skorpionen">
+                        <p class="text-decoration-underline stjernetegn-p grow">Skorpionen</p>
+                    </a>
+                    <a href="stjernetegn.html#skytten">
+                        <p class="text-decoration-underline stjernetegn-p grow">Skytten</p>
+                    </a>
+                    <a href="stjernetegn.html#stenbukken">
+                        <p class="text-decoration-underline stjernetegn-p grow">Stenbukken</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-footer justify-content-end">
+                <p>© 2024 Stjerne-natten</p>
+            </div>
+        </div>
+    </footer>
+    <!---Navigationsbar javasript bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!--Udregn stjernetegn-->
+    <script>
+        function zodiac() {
+            var birthmonth = document.getElementById("month").value;
+            var birthday = document.getElementById("day").value;
+            var result = "Ukendt fordi du ikke tastede en dato";
+            var buttonText = "Udregn dit stjernetegn";
+
+
+            if (birthmonth == 1 && birthday >= 20 || birthmonth == 2 && birthday <= 18) {
+                result = ("Vandmanden 20/1 - 18/2");
+                document.getElementById("img").innerHTML = "<img src='img/stjernebilleder/vandman-gold.png' width='20%'>";
+                document.getElementById("knap").innerHTML =
+                    `<button id='readMoreBtn' class='btn'>Lær mere om vandmanden</button>`;
+                document.getElementById("readMoreBtn").addEventListener("click", function () {
+                    window.location.href = "stjernetegn.html#vandmanden";
+                });
+            }
+
+            if (birthmonth == 2 && birthday >= 19 || birthmonth == 3 && birthday <= 20) {
+                result = ("Fisken 19/2 - 20/2");
+                document.getElementById("img").innerHTML = "<img src='img/stjernebilleder/fisk-gold.png' width='20%'>";
+                document.getElementById("knap").innerHTML =
+                    `<button id='readMoreBtn' class='btn'>Lær mere om fisken</button>`;
+                document.getElementById("readMoreBtn").addEventListener("click", function () {
+                    window.location.href = "stjernetegn.html#fisken";
+                });
+            }
+
+            if (birthmonth == 3 && birthday >= 21 || birthmonth == 4 && birthday <= 19) {
+                result = ("Vædderen 21/3 - 19/4");
+                document.getElementById("img").innerHTML = "<img src='img/stjernebilleder/vaedder-gold.png' width='20%'>";
+                document.getElementById("knap").innerHTML =
+                    `<button id='readMoreBtn' class='btn'>Lær mere om vædderen</button>`;
+                document.getElementById("readMoreBtn").addEventListener("click", function () {
+                    window.location.href = "stjernetegn.html#vaedderen";
+                });
+            }
+            if (birthmonth == 4 && birthday >= 20 || birthmonth == 5 && birthday <= 20) {
+                result = ("Tyren - 20/4 - 20/5");
+                document.getElementById("img").innerHTML = "<img src='img/stjernebilleder/tyr-gold.png' width='20%'>";
+                document.getElementById("knap").innerHTML =
+                    `<button id='readMoreBtn' class='btn'>Lær mere om tyren</button>`;
+                document.getElementById("readMoreBtn").addEventListener("click", function () {
+                    window.location.href = "stjernetegn.html#tyren";
+                });
+            }
+
+            if (birthmonth == 5 && birthday >= 21 || birthmonth == 6 && birthday <= 20
+            ) {
+                result = ("Tvillingen 21/5 - 20/6");
+                document.getElementById("img").innerHTML = "<img src='img/stjernebilleder/tvilling-gold.png' width='20%'>";
+                document.getElementById("knap").innerHTML =
+                    `<button id='readMoreBtn' class='btn'>Lær mere om tvillingen</button>`;
+                document.getElementById("readMoreBtn").addEventListener("click", function () {
+                    window.location.href = "stjernetegn.html#tvillingen";
+                });
+            }
+
+            if (birthmonth == 6 && birthday >= 21 || birthmonth == 7 && birthday <= 22) {
+                result = ("Krebsen 21/6 - 22/7");
+                document.getElementById("img").innerHTML = "<img src='img/stjernebilleder/krabs-gold.png' width='20%'>";
+                document.getElementById("knap").innerHTML =
+                    `<button id='readMoreBtn' class='btn'>Lær mere om krebsen</button>`;
+                document.getElementById("readMoreBtn").addEventListener("click", function () {
+                    window.location.href = "stjernetegn.html#krebsen";
+                });
+            }
+
+            if (birthmonth == 7 && birthday >= 23 || birthmonth == 8 && birthday <= 22) {
+                result = ("Løven 23/7 - 22/8");
+                document.getElementById("img").innerHTML = "<img src='img/stjernebilleder/leo-gold.png' width='20%'>";
+                document.getElementById("knap").innerHTML =
+                    `<button id='readMoreBtn' class='btn'>Lær mere om løven</button>`;
+                document.getElementById("readMoreBtn").addEventListener("click", function () {
+                    window.location.href = "stjernetegn.html#loeven";
+                });
+            }
+            if (birthmonth == 8 && birthday >= 23 || birthmonth == 9 && birthday <= 22) {
+                result = ("Jomfruen 23/8 - 22/9");
+                document.getElementById("img").innerHTML = "<img src='img/stjernebilleder/jomfru-gold.png' width='20%'>";
+                document.getElementById("knap").innerHTML =
+                    `<button id='readMoreBtn' class='btn'>Lær mere om jomfruen</button>`;
+                document.getElementById("readMoreBtn").addEventListener("click", function () {
+                    window.location.href = "stjernetegn.html#jomfruen";
+                });
+            }
+            if (birthmonth == 9 && birthday >= 23 || birthmonth == 10 && birthday <= 22) {
+                result = ("Vægten 23/9 - 22/10");
+                document.getElementById("img").innerHTML = "<img src='img/stjernebilleder/vaegt-gold.png' width='20%'>";
+                document.getElementById("knap").innerHTML =
+                    `<button id='readMoreBtn' class='btn'>Lær mere om vægten</button>`;
+                document.getElementById("readMoreBtn").addEventListener("click", function () {
+                    window.location.href = "stjernetegn.html#vaegten";
+                });
+            }
+            if (birthmonth == 10 && birthday >= 23 || birthmonth == 11 && birthday <= 21) {
+                result = ("Skorpionen - 23/10 - 21/11");
+                document.getElementById("img").innerHTML = "<img src='img/stjernebilleder/scorpio-gold.png' width='20%'>";
+                document.getElementById("knap").innerHTML =
+                    `<button id='readMoreBtn' class='btn'>Lær mere om skorpionen</button>`;
+                document.getElementById("readMoreBtn").addEventListener("click", function () {
+                    window.location.href = "stjernetegn.html#skorpionen";
+                });
+            }
+            if (birthmonth == 11 && birthday >= 22 || birthmonth == 12 && birthday <= 21) {
+                result = ("Skytten - 22/11 - 21/12");
+                document.getElementById("img").innerHTML = "<img src='img/stjernebilleder/skytte-gold.png' width='20%'>";
+                document.getElementById("knap").innerHTML =
+                    `<button id='readMoreBtn' class='btn'>Lær mere om skytten</button>`;
+                document.getElementById("readMoreBtn").addEventListener("click", function () {
+                    window.location.href = "stjernetegn.html#skytten";
+                });
+            }
+
+            if (birthmonth == 12 && birthday >= 22 || birthmonth == 1 && birthday <= 19) {
+                result = ("Stenbukken - 22/12 - 29/1");
+                document.getElementById("img").innerHTML = "<img src='img/stjernebilleder/stenbuk-gold.png' width='20%'>";
+                document.getElementById("knap").innerHTML =
+                    `<button id='readMoreBtn' class='btn'>Lær mere om stenbukken</button>`;
+                document.getElementById("readMoreBtn").addEventListener("click", function () {
+                    window.location.href = "stjernetegn.html#stenbukken";
+                });
+            }
+            document.getElementById("output").innerHTML = result;
+            document.getElementById('click').style.display = 'none';
+            document.getElementById('img-2').style.display = 'none';
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            var video = document.getElementById("video");
+            video.removeAttribute("controls");
+        });
+    </script>
+</body>
+
+</html>
